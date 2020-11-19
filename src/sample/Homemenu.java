@@ -1,13 +1,9 @@
 package sample;
 
 import javafx.geometry.Pos;
-import javafx.scene.Group;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
 
 import java.util.ArrayList;
 
@@ -18,6 +14,7 @@ public class Homemenu {
     private ArrayList<GenerativeMenu> menus = new ArrayList<>(){
         {
             add(new CircleMenu());
+            add(new OneDimensionAutomata());
         }
     };
 
@@ -45,7 +42,6 @@ public class Homemenu {
             count++;
         }
 
-        HEIGHT = scale*menus.size();
         root.setVgap(scale);
         root.setAlignment(Pos.CENTER);
     }
